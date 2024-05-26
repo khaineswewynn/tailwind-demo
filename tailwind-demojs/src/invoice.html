@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../public/style.css">
+</head>
+<body>
+   <div class="w-full mx-auto">
+    <div class="flex flex-row justify-between m-5">
+        
+            <div class="columns-4 flex flex-col gap-3">
+                <input type="text" name="" id="name" class="border border-gray-500" placeholder="Customer Name">
+                <input type="text" name="" id="email" class="border border-gray-500" placeholder="Customer Email">
+            </div>
+            <div class="columns-4 flex flex-col gap-3">
+                <input type="text" name="" id="invoceNo" class="border border-gray-500" placeholder="Invoice Number">
+                <input type="date" name="" id="date" class="border border-gray-600">
+            </div>
+       
+    </div>
+    <div class="row-auto text-end p-5">
+        <button class="bg-gray-950 text-gray-300 p-2 add"> Add </button>
+    </div>
+    <div class="row">
+        <table class="table w-full p-3 m-5">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Unit Price</th>
+                    <th>Qty</th>
+                    <th>Subtotal</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="data">
+                <tr class="my-3">
+                    <td><input type="text" name="item" id="" class="border border-gray-500 item" ></td>
+                    <td><input type="number" name="unit_price" id="" class="border border-gray-500 price" value="0"></td>
+                    <td><input type="number" name="qty" id="" class="border border-gray-500 qty " value="0"></td>
+                    <td><span class="subtotal">0</span></td>
+                    <td></td>
+                </tr>
+            </tbody>
+            <tfoot>
+                
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td> <label for="" class="text-end">Total</label></td>
+                    <td><span class="total">0</span></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td> <label for="" class="text-end">Discount</label></td>
+                    <td><input type="number" name="" id="" class="border border-gray-500 w-full"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td><label for="">Balance</label></td>
+                    <td><span class="w-full ">0</span></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    
+
+ 
+    
+    <div class="row p-5">
+        <button class="bg-gray-700 text-gray-100 rounded p-2 submit">Submit</button>
+    </div>
+   </div>
+    
+    <script src="js/invoice.js"></script>
+</body>
+</html>

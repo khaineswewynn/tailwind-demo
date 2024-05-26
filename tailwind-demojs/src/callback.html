@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let script=document.createElement('script')
+        function callMethod()
+        {
+            console.log("calling method")
+            //alert(`${script.src } is loaded`)
+           
+        }
+        function loadScript(src)
+        {   
+            console.log('starting')         
+            script.src=src
+            document.head.append(script)
+            script.onload=()=>{
+                console.log("loading in script")
+                greet()
+                callMethod() //synchronous function
+            }
+           // alert('loading')
+        }
+       
+        loadScript('js/callback.js')
+        //callMethod()
+        function greet()
+        {
+            console.log("Hello")
+        }
+        function sayName(name)
+        {
+            console.log(`${name} is called`)
+        }
+        setTimeout(greet,2000) //asynchronous function
+        greet()
+        sayName("David")
+
+        let numbers=[1,2,3,4,5]
+        function even(num)
+        {
+            if(num%2==0)
+                return num
+        }
+        console.log(numbers.filter(even)) //filter : synchrnous function
+         
+
+    </script>
+</body>
+</html>
